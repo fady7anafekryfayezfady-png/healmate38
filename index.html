@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover, maximum-scale=1.0, user-scalable=no" />
+  <title>HEAL MATE — مساعدك الصحي المتكامل</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- 📱 PWA - إضافات جديدة -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4a69ff">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="HEAL MATE">
+</head>
+<body class="no-scroll">
+  <!-- SPLASH -->
+  <div id="splashLoader" class="splash">
+    <div class="splash-inner">
+      <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="64" height="64" fill="currentColor">
+          <path d="M256 448l-30.164-27.211C144.069 345.304 64 271.867 64 187.333 64 114.688 120.687 58 193.333 58c43.243 0 84.608 20.053 111.36 51.947h2.613C334.059 78.053 375.424 58 418.667 58 491.312 58 548 114.688 548 187.333c0 84.533-80.069 157.971-161.835 233.456L256 448z"/>
+          <path d="M362.667 138.667h-64v-64h-85.334v64h-64v85.333h64v64h85.334v-64h64z" fill="#fff"/>
+        </svg>
+      </div>
+      <div class="brand">HEAL MATE</div>
+      <div class="sub">نظامك الصحي الذكي</div>
+      <div class="dots">
+        <div class="loader-dot" style="animation-delay:0s"></div>
+        <div class="loader-dot" style="animation-delay:.2s"></div>
+        <div class="loader-dot" style="animation-delay:.4s"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🌟 Intro - Professional Modern Design -->
+<section id="intro" class="intro-modern" style="display:none">
+  <!-- خلفية Particles متحركة -->
+  <canvas id="particles-canvas"></canvas>
+  
+  <!-- المحتوى الرئيسي -->
+  <div class="intro-container">
+    
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <!-- Logo متحرك -->
+      <div class="logo-animated">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="80" height="80" fill="currentColor">
+          <path d="M256 448l-30.164-27.211C144.069 345.304 64 271.867 64 187.333 64 114.688 120.687 58 193.333 58c43.243 0 84.608 20.053 111.36 51.947h2.613C334.059 78.053 375.424 58 418.667 58 491.312 58 548 114.688 548 187.333c0 84.533-80.069 157.971-161.835 233.456L256 448z"/>
+          <path d="M362.667 138.667h-64v-64h-85.334v64h-64v85.333h64v64h85.334v-64h64z" fill="#fff"/>
+        </svg>
+        <div class="pulse-ring"></div>
+        <div class="pulse-ring pulse-ring-delay"></div>
+      </div>
+      
+      <!-- العنوان الرئيسي -->
+      <h1 class="hero-title">
+        <span class="gradient-text">HEAL MATE</span>
+        <span class="version-badge">v3.0 Pro</span>
+      </h1>
+      
+      <!-- الوصف -->
+      <p class="hero-subtitle">
+        نظامك الصحي الذكي المتكامل<br>
+        <span class="feature-tags">
+          💊 أدوية • 🏋️ تمارين • 🍎 تغذية • 🧠 AI طبي
+        </span>
+      </p>
+      
+      <!-- زر البدء -->
+      <button id="startBtn" class="btn-hero">
+        <span class="btn-text">ابدأ رحلتك الصحية</span>
+        <span class="btn-icon">🚀</span>
+        <div class="btn-shine"></div>
+      </button>
+      
+      <!-- إحصائيات سريعة -->
+      <div class="stats-row">
+        <div class="stat-item">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">مرض وحالة</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">30+</div>
+          <div class="stat-label">تمرين رياضي</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">200+</div>
+          <div class="stat-label">صنف طعام</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- بطاقات المميزات -->
+    <div class="features-grid">
+      
+      <div class="feature-card" style="--delay: 0.1s">
+        <div class="feature-icon">💊</div>
+        <h3>منظم أدوية ذكي</h3>
+        <p>تذكير صوتي قوي في الوقت المحدد</p>
+      </div>
+      
+      <div class="feature-card" style="--delay: 0.2s">
+        <div class="feature-icon">🧠</div>
+        <h3>استشارات AI</h3>
+        <p>ذكاء اصطناعي طبي يفهم العامية</p>
+      </div>
+      
+      <div class="feature-card" style="--delay: 0.3s">
+        <div class="feature-icon">📊</div>
+        <h3>قياسات حيوية</h3>
+        <p>تتبع ضغط الدم والسكر والوزن</p>
+      </div>
+      
+      <div class="feature-card" style="--delay: 0.4s">
+        <div class="feature-icon">🏆</div>
+        <h3>نظام النقاط</h3>
+        <p>شارات وإنجازات لتحفيز الالتزام</p>
+      </div>
+      
+    </div>
+    
+    <!-- نقاط بارزة -->
+    <div class="highlights">
+      <div class="highlight-item">✅ عربي 100%</div>
+      <div class="highlight-item">✅ آمن ومحفوظ محلياً</div>
+      <div class="highlight-item">✅ بدون إعلانات</div>
+      <div class="highlight-item">✅ مجاني كلياً</div>
+    </div>
+    
+  </div>
+  
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator">
+    <div class="mouse">
+      <div class="wheel"></div>
+    </div>
+    <div class="arrow-down">↓</div>
+  </div>
+  
+</section>
+
+  <!-- APP -->
+  <div id="app" class="app hidden">
+    <header class="topbar">
+      <div class="left">
+        <button id="menuBtn" class="icon-btn">☰</button>
+        <div class="topbar-brand">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24" fill="currentColor">
+            <path d="M256 448l-30.164-27.211C144.069 345.304 64 271.867 64 187.333 64 114.688 120.687 58 193.333 58c43.243 0 84.608 20.053 111.36 51.947h2.613C334.059 78.053 375.424 58 418.667 58 491.312 58 548 114.688 548 187.333c0 84.533-80.069 157.971-161.835 233.456L256 448z"/>
+            <path d="M362.667 138.667h-64v-64h-85.334v64h-64v85.333h64v64h85.334v-64h64z" fill="#fff"/>
+          </svg>
+          <span class="title">HEAL MATE</span>
+        </div>
+      </div>
+      <div class="right">
+        <!-- 🎮 شريط النقاط -->
+        <div class="points-bar">
+          <span>💎</span>
+          <span id="pointsDisplay">0</span>
+        </div>
+        <button id="settingsBtn" class="icon-btn" title="إعدادات">⚙️</button>
+        <button id="darkToggle" class="icon-btn" title="الليلي">🌙</button>
+      </div>
+    </header>
+
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="36" height="36" fill="currentColor">
+            <path d="M256 448l-30.164-27.211C144.069 345.304 64 271.867 64 187.333 64 114.688 120.687 58 193.333 58c43.243 0 84.608 20.053 111.36 51.947h2.613C334.059 78.053 375.424 58 418.667 58 491.312 58 548 114.688 548 187.333c0 84.533-80.069 157.971-161.835 233.456L256 448z"/>
+            <path d="M362.667 138.667h-64v-64h-85.334v64h-64v85.333h64v64h85.334v-64h64z" fill="#fff"/>
+          </svg>
+          <span>HEAL MATE</span>
+        </div>
+        <button id="closeSidebar" class="icon-btn">✕</button>
+      </div>
+      <nav>
+        <ul>
+          <li><button data-page="page-meds" class="sidebar-link">💊 الأدوية</button></li>
+          <li><button data-page="page-exercises" class="sidebar-link">🏋️ التمارين</button></li>
+          <li><button data-page="page-breathing" class="sidebar-link">🫁 التنفس</button></li>
+          <li><button data-page="page-vitals" class="sidebar-link">📊 القياسات</button></li>
+          <li><button data-page="page-calories" class="sidebar-link">🍎 السعرات</button></li>
+          <li><button data-page="page-bmi" class="sidebar-link">⚖️ BMI Calculator</button></li>
+          <li><button data-page="page-ai" class="sidebar-link">🧠 الاستشارات</button></li>
+         <li><button data-page="page-books" class="sidebar-link">📚 قراءة كتب</button></li> 
+          <!-- 🎮 صفحة الشارات -->
+          <li><button data-page="page-badges" class="sidebar-link">🏆 الشارات</button></li>
+          <li><button data-page="page-settings" class="sidebar-link">⚙️ الإعدادات</button></li>
+          <li><button data-page="page-about" class="sidebar-link">ℹ️ عن التطبيق</button></li>
+          <li><button data-page="page-history" class="sidebar-link">📈 السجل</button></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <button id="fab" class="fab">＋</button>
+
+    <main class="main">
+      <!-- Meds -->
+      <section id="page-meds" class="page active">
+        <div class="page-head">
+          <h2>💊 منظم الأدوية الذكي</h2>
+          <p class="muted">تذكير صوتي قوي في الوقت المحدد</p>
+        </div>
+        <!-- 🆕 بحث في قاعدة بيانات الأدوية -->
+  <div class="card drug-search-card">
+    <h3>🔍 ابحث عن دواء</h3>
+    <p class="muted" style="margin-bottom: 15px;">
+ابحث عن الادوية و معلومتها
+    </p>
+    
+    <input 
+      id="drugSearchInput" 
+      type="text" 
+      placeholder="اكتب اسم الدواء (مثال: بنادول، كونجستال، أوجمنتين...)" 
+    />
+    
+    <!-- اقتراحات البحث -->
+    <div id="drugSuggestions" class="suggestions"></div>
+    
+    <!-- نتيجة البحث -->
+    <div id="drugInfoResult" class="drug-info-result" style="display:none;"></div>
+  </div>
+        <div class="card">
+          <input id="medName" type="text" placeholder="اسم الدواء" />
+          <input id="medTime" type="time" />
+          <div class="row">
+            <button id="addMedBtn" class="btn primary">إضافة</button>
+            <button id="clearMedsBtn" class="btn danger">مسح الكل</button>
+          </div>
+        </div>
+        <div class="card">
+          <h3>قائمة الأدوية</h3>
+          <ul id="medList" class="list"></ul>
+        </div>
+      </section>
+
+      <!-- Exercises -->
+      <section id="page-exercises" class="page hidden">
+        <div class="page-head">
+          <h2>🏋️ التمارين الرياضية</h2>
+          <p class="muted">30 تمرين مصنف حسب التوقيت</p>
+        </div>
+        <div class="card">
+          <div class="exercise-filter">
+            <button class="filter-btn active" data-time="morning">🌅 صباح</button>
+            <button class="filter-btn" data-time="noon">☀️ ظهر</button>
+            <button class="filter-btn" data-time="evening">🌙 مساء</button>
+          </div>
+        </div>
+        <div id="exercisesList"></div>
+      </section>
+
+      <!-- Breathing -->
+      <section id="page-breathing" class="page hidden">
+        <div class="page-head">
+          <h2>🫁 تمارين التنفس العلاجية</h2>
+          <p class="muted">تقنيات علمية مثبتة</p>
+        </div>
+        <div id="breathingList"></div>
+      </section>
+
+      <!-- Vitals -->
+<section id="page-vitals" class="page hidden">
+  <div class="page-head">
+    <h2>📊 القياسات الحيوية</h2>
+    <p class="muted">سجل قراءاتك اليومية وتابع تطورك</p>
+  </div>
+
+  <!-- 🎯 بطاقة التطور - جديدة! -->
+  <div class="card progress-card">
+    <h3>📈 تطورك الأسبوعي</h3>
+    <div id="progressSummary" class="progress-summary">
+      <div class="muted" style="text-align:center; padding:20px;">
+        سجل قراءات لمدة يومين على الأقل لرؤية التطور
+      </div>
+    </div>
+  </div>
+
+  <!-- بطاقة التسجيل -->
+  <div class="card">
+    <h3>✍️ تسجيل جديد</h3>
+    <div class="input-group">
+      <label>🩸 ضغط الدم</label>
+      <div class="bp-inputs">
+        <input id="bpSys" type="number" placeholder="الانقباضي (120)" />
+        <span style="padding:0 8px; color:var(--muted);">/</span>
+        <input id="bpDia" type="number" placeholder="الانبساطي (80)" />
+      </div>
+    </div>
+    
+    <div class="input-group">
+      <label>🍬 السكر (mg/dL)</label>
+      <input id="sugar" type="number" placeholder="مثال: 110" />
+    </div>
+    
+    <div class="input-group">
+      <label>⚖️ الوزن (كجم)</label>
+      <input id="weight" type="number" placeholder="مثال: 75.5" step="0.1" />
+    </div>
+   <div class="input-group">
+  
+    <div class="row">
+      <button id="saveVitalsBtn" class="btn primary">💾 حفظ القراءة</button>
+      <button id="exportVitalsBtn" class="btn">📤 تصدير</button>
+    </div>
+  </div>
+
+  <!-- بطاقة السجل -->
+  <div class="card">
+    <h3>📋 آخر 30 قراءة</h3>
+    <ul id="vitalsLogList" class="list"></ul>
+  </div>
+</section>
+
+      <!-- Calories -->
+      <section id="page-calories" class="page hidden">
+        <div class="page-head">
+          <h2>🍎 حساب السعرات بالذكاء الاصطناعي</h2>
+          <p class="muted">أي طعام أو شراب - الذكاء يفهمك</p>
+        </div>
+       <div class="card">
+  <div style="background: #fff9c4; padding: 12px; border-radius: 10px; margin-bottom: 15px; border-right: 4px solid #f59e0b;">
+    <strong>💡 ملاحظة مهمة:</strong><br>
+    <span style="font-size: 14px; color: #6a4b00;">
+      القيم المعروضة لكل <strong>100 جرام</strong> من الطعام<br>
+      (طبق كامل = 250-350 جرام تقريباً)
+    </span>
+  </div>
+  <input id="calInput" type="text" placeholder="اكتب أكلات متعددة: كفتة، مكرونة، سلطة (افصلهم بفاصلة)" />
+          <div id="calSuggestions" class="suggestions"></div>
+        <div id="calResult" class="cal-result">
+  <p class="muted">اكتب عدة أصناف مفصولة بفاصلة...</p>
+  <div id="calItemsList" style="margin-top:15px; display:none;"></div>
+</div>
+        </div>
+        <div class="card">
+          <h3>💡 أمثلة سريعة:</h3>
+          <div class="examples">
+            <button class="example-btn" data-example="رغيف طعمية">رغيف طعمية</button>
+            <button class="example-btn" data-example="كوب شاي بحليب">شاي بحليب</button>
+            <button class="example-btn" data-example="طبق كشري كبير">طبق كشري</button>
+            <button class="example-btn" data-example="تفاحة وموزة">تفاحة وموزة</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI Medical -->
+      <section id="page-ai" class="page hidden">
+        <div class="page-head">
+          <h2>🧠 الاستشارات الطبية الذكية</h2>
+          <p class="muted">ذكاء اصطناعي طبي متقدم - يفهم العامية</p>
+        </div>
+        <div class="card chat-card">
+          <div class="ai-warning">
+            ⚠️ المعلومات استرشادية ولا تغني عن استشارة طبيب متخصص
+          </div>
+          <div id="chatWindow" class="chat-window"></div>
+          <div class="chat-controls">
+            <input id="chatInput" type="text" placeholder="اشرح الأعراض بالتفصيل..." />
+            <button id="sendChatBtn" class="btn">إرسال</button>
+            <button id="voiceChatBtn" class="btn">🎤</button>
+          </div>
+          <div class="quick-buttons">
+            <button class="quick" data-q="عندي صداع نصفي شديد">صداع نصفي</button>
+            <button class="quick" data-q="وجع في الركبة">وجع ركبة</button>
+            <button class="quick" data-q="حساسية وهرش">حساسية</button>
+            <button class="quick" data-q="مش عارف انام">أرق</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 🎮 Badges Page -->
+      <section id="page-badges" class="page hidden">
+        <div class="page-head">
+          <h2>🏆 الشارات والإنجازات</h2>
+          <p class="muted">اكسب نقاط واحصل على شارات</p>
+        </div>
+        <div id="badgesContainer"></div>
+      </section>
+<!-- BMI Calculator -->
+      <section id="page-bmi" class="page hidden">
+        <div class="page-head">
+          <h2>⚖️ حاسبة مؤشر كتلة الجسم (BMI)</h2>
+          <p class="muted">احسب وزنك المثالي بدقة علمية</p>
+        </div>
+
+        <!-- بطاقة الإدخال -->
+        <div class="card">
+          <h3>📝 أدخل بياناتك</h3>
+         <!-- الجنس -->
+<div class="input-group">
+  <label>👤 الجنس</label>
+  <select id="bmiGender">
+    <option value="">اختر الجنس</option>
+    <option value="male">ذكر 👨</option>
+    <option value="female">أنثى 👩</option>
+  </select>
+</div>
+
+<!-- السن -->
+<div class="input-group">
+  <label>🎂 السن (سنة)</label>
+  <input id="bmiAge" type="number" placeholder="مثال: 25" min="2" max="120" />
+</div>
+
+<!-- الطول -->
+<div class="input-group">
+  <label>📏 الطول (سم)</label>
+  <input id="bmiHeight" type="number" placeholder="مثال: 170" min="100" max="250" />
+</div>
+          
+          <div class="input-group">
+            <label>⚖️ الوزن (كجم)</label>
+            <input id="bmiWeight" type="number" placeholder="مثال: 75" min="30" max="300" step="0.1" />
+          </div>
+          
+          <div class="row">
+            <button id="calcBmiBtn" class="btn primary">🔍 احسب الآن</button>
+            <button id="clearBmiBtn" class="btn danger">🗑️ مسح السجل</button>
+          </div>
+        </div>
+
+        <!-- بطاقة النتيجة -->
+        <div id="bmiResult" class="card bmi-result-card" style="display:none;">
+          <h3>📊 النتيجة</h3>
+          
+          <div class="bmi-display">
+            <div class="bmi-value-wrapper">
+              <span class="bmi-label">مؤشر كتلة الجسم</span>
+              <span id="bmiValue" class="bmi-value">0</span>
+            </div>
+            <div id="bmiCategory" class="bmi-category">🟢 طبيعي</div>
+          </div>
+
+          <!-- المقياس -->
+                   <div class="bmi-scale-labels">
+            <span>نحيف</span>
+            <span>طبيعي</span>
+            <span>زيادة</span>
+            <span>سمنة</span>
+          </div>
+
+          <!-- النصائح -->
+          <div id="bmiAdvice" class="bmi-advice"></div>
+          
+          <!-- الوزن المثالي -->
+       <!-- الوزن المثالي -->
+          <div id="idealWeight" class="ideal-weight"></div>
+          
+          <!-- 🆕 النظام الغذائي والتمارين -->
+          <div id="bmiPlan" class="bmi-plan" style="display:none;">
+            <div class="plan-section">
+              <h4>🍽️ نظام غذائي مقترح</h4>
+              <div id="dietPlan"></div>
+            </div>
+            
+            <div class="plan-section">
+              <h4>🏋️ تمارين رياضية</h4>
+              <div id="exercisePlan"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- السجل -->
+        <div class="card">
+          <h3>📋 آخر 20 قياس</h3>
+          <ul id="bmiHistoryList" class="list bmi-history"></ul>
+        </div>
+      </section>
+      <!-- Settings -->
+      <section id="page-settings" class="page hidden">
+        <div class="page-head">
+          <h2>⚙️ الإعدادات</h2>
+          <p class="muted">تخصيص التطبيق</p>
+        </div>
+        <div class="card">
+  <h3>🔔 الإشعارات</h3>
+  <p class="muted" style="margin-bottom: 14px;">
+    لتلقي تذكيرات الأدوية حتى لو التطبيق مغلق
+  </p>
+  <div id="notificationStatus" class="notification-status"></div>
+  <button id="enableNotificationsBtn" class="btn primary" style="width:100%;">
+    🔔 تفعيل الإشعارات
+  </button>
+</div>
+        <div class="card">
+          <h3>🎨 المظهر</h3>
+          <div class="setting-row">
+            <span>الوضع الليلي</span>
+            <label class="switch">
+              <input type="checkbox" id="darkModeSwitch">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="card">
+          <h3>🎵 الموسيقى الخلفية</h3>
+          <div class="setting-row">
+            <span>تشغيل موسيقى هادئة</span>
+            <label class="switch">
+              <input type="checkbox" id="musicSwitch">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <button id="changeMusicBtn" class="btn">🎶 تغيير المقطع الموسيقي</button>
+        </div>
+        <div class="card">
+          <h3>ℹ️ معلومات</h3>
+          <p class="muted">HEAL MATE v3.0 Professional</p>
+          <p class="muted">نظام صحي ذكي متكامل</p>
+        </div>
+      </section>
+<!-- About App -->
+<section id="page-about" class="page hidden">
+  <div class="page-head">
+    <h2>ℹ️ عن HEAL MATE</h2>
+    <p class="muted">نظام صحي ذكي متكامل - كل المميزات في مكان واحد</p>
+  </div>
+
+  <!-- المعلومات الأساسية -->
+  <div class="card">
+    <h3>🏥 معلومات التطبيق</h3>
+    <div class="about-info">
+      <p><strong>الإصدار:</strong> v3.0 Professional</p>
+      <p><strong>النوع:</strong> تطبيق ويب تقدمي (PWA)</p>
+      <p><strong>اللغة:</strong> عربي 100%</p>
+      <p><strong>متوفر:</strong> أونلاين </p>
+    </div>
+  </div>
+
+  <!-- المميزات الرئيسية -->
+  <div class="card">
+    <h3>✨ المميزات الرئيسية</h3>
+    <div class="feature-list">
+      
+      <div class="feature-item">
+        <div class="feature-icon">💊</div>
+        <div class="feature-content">
+          <h4>منظم الأدوية الذكي</h4>
+          <p>• تذكير صوتي قوي في الوقت المحدد<br>
+             • تنبيهات متكررة حتى أخذ الدواء<br>
+             • سجل كامل لكل الأدوية</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">🏋️</div>
+        <div class="feature-content">
+          <h4>30+ تمرين رياضي</h4>
+          <p>• تمارين مصنفة حسب التوقيت (صباح، ظهر، مساء)<br>
+             • فيديوهات تعليمية لكل تمرين<br>
+             • تمارين للمبتدئين والمحترفين<br>
+             • شرح فوائد كل تمرين</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">🫁</div>
+        <div class="feature-content">
+          <h4>تمارين التنفس العلاجية</h4>
+          <p>• 4 تقنيات تنفس علمية مثبتة<br>
+             • تمرين 4-7-8 للاسترخاء<br>
+             • Box Breathing لزيادة التركيز<br>
+             • Wim Hof Method للطاقة<br>
+             • مؤقت تفاعلي وإرشادات صوتية</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">📊</div>
+        <div class="feature-content">
+          <h4>القياسات الحيوية</h4>
+          <p>• تسجيل ضغط الدم، السكر، الوزن<br>
+             • تتبع التطور الأسبوعي<br>
+             • رسوم بيانية توضيحية<br>
+             • نصائح تلقائية حسب القراءات<br>
+             • تصدير البيانات بصيغة JSON</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">🍎</div>
+        <div class="feature-content">
+          <h4>حاسبة السعرات بالذكاء الاصطناعي</h4>
+          <p>• أكثر من 200 صنف طعام مصري وعربي<br>
+             • إدخال عدة أصناف مرة واحدة<br>
+             • حساب دقيق للسعرات<br>
+             • فهم اللهجة العامية<br>
+             • أمثلة سريعة جاهزة</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">⚖️</div>
+        <div class="feature-content">
+          <h4>حاسبة مؤشر كتلة الجسم (BMI)</h4>
+          <p>• حساب BMI بدقة علمية<br>
+             • تصنيف الوزن (نحيف، طبيعي، زيادة، سمنة)<br>
+             • حساب الوزن المثالي<br>
+             • نصائح مخصصة حسب الحالة<br>
+             • سجل آخر 20 قياس</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">🧠</div>
+        <div class="feature-content">
+          <h4>الاستشارات الطبية الذكية</h4>
+          <p>• ذكاء اصطناعي طبي متقدم<br>
+             • قاعدة بيانات 50+ مرض وحالة<br>
+             • فهم اللهجة المصرية والعامية<br>
+             • أعراض، علاج، أدوية، ووقاية<br>
+             • تحذيرات طوارئ فورية<br>
+             • تعرف صوتي على الأسئلة</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">🏆</div>
+        <div class="feature-content">
+          <h4>نظام النقاط والشارات</h4>
+          <p>• اكسب نقاط على كل نشاط<br>
+             • 5 مستويات تقدم (مبتدئ → أسطورة)<br>
+             • 6 شارات إنجاز مميزة<br>
+             • نظام Streak للأيام المتواصلة<br>
+             • تحفيز مستمر للالتزام</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- مميزات تقنية -->
+  <div class="card">
+    <h3>⚙️ مميزات تقنية</h3>
+    <div class="tech-features">
+      <div class="tech-item">✅ حفظ البيانات محلياً وآمن</div>
+      <div class="tech-item">✅ واجهة عربية 100%</div>
+      <div class="tech-item">✅ وضع ليلي تلقائي</div>
+      <div class="tech-item">✅ موسيقى خلفية هادئة</div>
+      <div class="tech-item">✅ تصميم متجاوب (موبايل/كمبيوتر)</div>
+      <div class="tech-item">✅ إشعارات حتى لو التطبيق مغلق</div>
+      <div class="tech-item">✅ صوت منبه قوي ومتكرر</div>
+      <div class="tech-item">✅ تصدير البيانات</div>
+      <div class="tech-item">✅ سرعة فائقة وسلاسة</div>
+    </div>
+  </div>
+
+  <!-- قاعدة البيانات الطبية -->
+  <div class="card">
+    <h3>🩺 قاعدة البيانات الطبية</h3>
+    <p class="muted" style="margin-bottom:12px;">يحتوي التطبيق على معلومات طبية شاملة لـ:</p>
+    <div class="medical-categories">
+      <span class="med-tag">💊 الأدوية والعلاج</span>
+      <span class="med-tag">🫁 أمراض الجهاز التنفسي</span>
+      <span class="med-tag">❤️ أمراض القلب والأوعية</span>
+      <span class="med-tag">🍽️ الجهاز الهضمي</span>
+      <span class="med-tag">🦴 العظام والمفاصل</span>
+      <span class="med-tag">🧠 الأمراض العصبية</span>
+      <span class="med-tag">👶 أمراض الأطفال</span>
+      <span class="med-tag">👩 أمراض النساء</span>
+      <span class="med-tag">🔬 الأمراض المزمنة</span>
+      <span class="med-tag">🩸 الدم والمناعة</span>
+      <span class="med-tag">👁️ العيون والأنف والأذن</span>
+      <span class="med-tag">🧬 الأمراض الوراثية</span>
+    </div>
+  </div>
+
+  <!-- تحذير طبي -->
+  <div class="card" style="background: #fff9c4; border: 2px solid #ffe082;">
+    <h3>⚠️ تحذير طبي مهم</h3>
+    <p style="color: #6a4b00; font-weight: 600; line-height: 1.7;">
+      المعلومات الطبية المقدمة في هذا التطبيق <strong>استرشادية فقط</strong> ولا تغني عن استشارة طبيب متخصص.
+      <br><br>
+      في حالة الطوارئ أو الأعراض الشديدة، يجب <strong>التوجه فوراً</strong> إلى أقرب مستشفى أو الاتصال بالإسعاف.
+    </p>
+  </div>
+
+  <!-- حقوق -->
+  <div class="card" style="text-align: center; background: var(--accent-light);">
+    <p style="font-size: 14px; color: var(--muted); margin: 0;">
+      صُمم وطُور بـ ❤️ لخدمة الصحة العامة<br>
+      <strong style="color: var(--accent);">HEAL MATE © 2025</strong>
+    </p>
+  </div>
+
+</section>
+      <!-- History -->
+      <section id="page-history" class="page hidden">
+        <div class="page-head">
+          <h2>📈 سجل النشاط</h2>
+          <p class="muted">تاريخ كامل لأنشطتك</p>
+        </div>
+        <div class="card">
+          <ul id="activityLog" class="list"></ul>
+          <div class="row">
+            <button id="clearHistoryBtn" class="btn danger">مسح</button>
+            <button id="exportHistoryBtn" class="btn">تصدير</button>
+          </div>
+        </div>
+      </section>
+  <!-- Books Page -->
+<section id="page-books" class="page hidden">
+  <div class="page-head">
+    <h2>📚 مكتبة الكتب النفسية</h2>
+    <p class="muted">كتب مختارة للصحة النفسية</p>
+  </div>
+
+  <div class="books-grid">
+    
+    <!-- Book 1 -->
+    <div class="book-card" data-book="book1">
+      <div class="book-cover">📖</div>
+      <div class="book-info">
+        <h3>الإنسان يبحث عن المعنى</h3>
+        <p class="book-author">فيكتور فرانكل</p>
+        <p class="book-desc">رحلة نفسية عميقة في معسكرات الاعتقال النازية، يشرح فيها فرانكل كيف يمكن للإنسان أن يجد معنى لحياته حتى في أصعب الظروف.</p>
+        <button class="btn btn-book" data-pdf="_mktbtypdf_com_-الإنسان-يبحث-عن-المعنى.pdf">📖 اقرأ الكتاب</button>
+      </div>
+    </div>
+
+    <!-- Book 2 -->
+    <div class="book-card" data-book="book2">
+      <div class="book-cover">📘</div>
+      <div class="book-info">
+        <h3>أنا بخير، أنت بخير</h3>
+        <p class="book-author">توماس هاريس</p>
+        <p class="book-desc">كتاب كلاسيكي في التحليل التفاعلي يساعدك على فهم سلوكياتك وعلاقاتك مع الآخرين بطريقة علمية بسيطة.</p>
+        <button class="btn btn-book" data-pdf="HC73BTDKWJ.pdf">📖 اقرأ الكتاب</button>
+      </div>
+    </div>
+
+    <!-- Book 3 -->
+    <div class="book-card" data-book="book3">
+      <div class="book-cover">📗</div>
+      <div class="book-info">
+        <h3>الشعور الجيد</h3>
+        <p class="book-author">ديفيد بيرنز</p>
+        <p class="book-desc">دليل عملي للعلاج المعرفي السلوكي، يعلمك تقنيات مثبتة علمياً للتخلص من الاكتئاب والقلق وتحسين مزاجك.</p>
+        <button class="btn btn-book" data-pdf="VO4BVBNNFH.pdf">📖 اقرأ الكتاب</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PDF Reader Page -->
+<section id="page-pdf-reader" class="page hidden">
+  <div class="page-head">
+    <button id="backFromPdf" class="btn">← رجوع</button>
+    <h2 id="pdfTitle">قارئ الكتب</h2>
+  </div>
+  
+  <div class="pdf-container">
+    <div class="pdf-toolbar">
+      <button id="downloadPdfBtn" class="btn success">⬇️ تحميل الكتاب</button>
+    </div>
+    <iframe id="pdfViewer" class="pdf-viewer" src="" frameborder="0"></iframe>
+  </div>
+</section>
+    </main>
+
+    <nav class="bottom-nav">
+      <button class="nav-btn active" data-page="page-meds">💊</button>
+      <button class="nav-btn" data-page="page-exercises">🏋️</button>
+      <button class="nav-btn" data-page="page-breathing">🫁</button>
+      <button class="nav-btn" data-page="page-bmi">⚖️</button>
+      <button class="nav-btn" data-page="page-calories">🍎</button>
+      <button class="nav-btn" data-page="page-ai">🧠</button>
+    </nav>
+  </div>
+
+  <!-- Alarm -->
+  <div id="alarmOverlay" class="alarm-overlay" style="display:none">
+    <div class="alarm-card">
+      <div class="alarm-icon">⏰</div>
+      <h2 id="alarmMedName">حان وقت الدواء!</h2>
+      <p class="alarm-time" id="alarmTime"></p>
+      <div class="alarm-actions">
+        <button id="stopAlarmBtn" class="btn btn-large danger">إيقاف المنبه</button>
+        <button id="snoozeAlarmBtn" class="btn">تأجيل 5 دقائق</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video -->
+  <dialog id="videoDialog" class="video-dialog">
+    <button id="closeVideo" class="close-dialog">✕</button>
+    <div class="video-wrap">
+      <iframe id="videoIframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </dialog>
+
+  <!-- Audio -->
+  <audio id="alarmRing" preload="auto" loop>
+    <source src="https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="musicTrack" preload="auto" loop></audio>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="script.js"></script>
+   </body> 
+  </html>

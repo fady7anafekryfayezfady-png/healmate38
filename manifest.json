@@ -1,0 +1,61 @@
+{
+  "name": "HEAL MATE — نظامك الصحي الذكي",
+  "short_name": "HEAL MATE",
+  "description": "تطبيق صحي متكامل: أدوية، تمارين، تغذية، استشارات طبية",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#4a69ff",
+  "theme_color": "#4a69ff",
+  "orientation": "portrait",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect fill='%234a69ff' width='512' height='512' rx='115'/><text x='256' y='370' font-size='280' text-anchor='middle' fill='white'>💊</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect fill='%234a69ff' width='512' height='512' rx='115'/><text x='256' y='370' font-size='280' text-anchor='middle' fill='white'>💊</text></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "إضافة دواء",
+      "short_name": "دواء",
+      "url": "/#page-meds",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>💊</text></svg>",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "التمارين",
+      "short_name": "رياضة",
+      "url": "/#page-exercises",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🏋️</text></svg>",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "استشارة طبية",
+      "short_name": "AI",
+      "url": "/#page-ai",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🧠</text></svg>",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}
